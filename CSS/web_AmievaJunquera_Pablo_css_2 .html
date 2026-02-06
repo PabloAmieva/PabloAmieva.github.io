@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS 2 · id + índice — Pablo Amieva Junquera</title>
+
+    <style>
+      /* Tipografía global */
+      * {
+        font-family: Georgia, serif;
+      }
+
+      /* Fondo general */
+      body {
+        background-color: rgb(241, 250, 238);
+      }
+
+      /* ===== REGLAS GENERALES (primer animal) ===== */
+      h1 {
+        color: rgb(45, 106, 79);
+      }
+
+      p {
+        color: rgb(27, 38, 59);
+      }
+
+      strong {
+        color: rgb(231, 111, 81);
+      }
+
+      /* ===== REGLAS POR id (segundo animal) ===== */
+      #titulo-animal2 {
+        color: rgb(90, 24, 154);
+      }
+
+      #desc-animal2 {
+        color: rgb(38, 70, 83);
+      }
+
+      #desc-animal2 strong {
+        color: rgb(244, 162, 97);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ÍNDICE -->
+    <h2 id="indice">Índice</h2>
+    <ul>
+      <li><a href="#titulo-animal1">Ajolote mexicano</a></li>
+      <li><a href="#titulo-animal2">Lince ibérico</a></li>
+    </ul>
+
+    <!-- PRIMER ANIMAL -->
+    <h1 id="titulo-animal1">Ajolote mexicano</h1>
+    <p id="desc-animal1">
+      El <strong>ajolote</strong> es un anfibio endémico de México que vive en lagos de agua dulce.
+      Es conocido por su capacidad de regenerar extremidades y por su aspecto juvenil permanente.
+    </p>
+
+    <img src="https://muyinteresante.okdiario.com/wp-content/uploads/sites/5/2022/10/13/634822e8bf9b4.jpeg"
+         alt="Ajolote mexicano en agua dulce"
+         width="520">
+
+    <p><a href="#indice">Volver al índice</a></p>
+
+    <!-- SEGUNDO ANIMAL -->
+    <h1 id="titulo-animal2">Lince ibérico</h1>
+    <p id="desc-animal2">
+      El <strong>lince ibérico</strong> es uno de los felinos más amenazados del mundo.
+      Habita zonas de matorral mediterráneo y destaca por sus orejas con pinceles negros
+      y su pelaje moteado.
+    </p>
+
+    <img src="https://zoo.cordoba.es/wp-content/uploads/2021/05/interiorc.jpg"
+
+    <p><a href="#indice">Volver al índice</a></p>
+
+  </body>
+</html>
