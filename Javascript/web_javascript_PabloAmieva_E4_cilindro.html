@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Volumen - Cilindro</title>
+</head>
+<body>
+    <h1>Cálculo de Volumen de un Cilindro</h1>
+
+    <script>
+        let radio = parseFloat(prompt("Ingrese el valor del radio de la base del cilindro (en unidades):"));
+        let altura = parseFloat(prompt("Ingrese el valor de la altura del cilindro (en unidades):"));
+        
+        if (radio > 0 && altura > 0) {
+            let volumen = Math.PI * Math.pow(radio, 2) * altura;
+            document.write("El volumen del cilindro es: " + volumen.toFixed(2) + " unidades cúbicas.");
+        } else {
+            document.write("Por favor, ingrese valores válidos.");
+        }
+    </script>
+</body>
+</html>

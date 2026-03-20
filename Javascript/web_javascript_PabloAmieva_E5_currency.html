@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de Euros a Dólares</title>
+</head>
+<body>
+    <h1>Conversión de Euros a Dólares</h1>
+
+    <script>
+        let euros = parseFloat(prompt("Ingrese el valor en Euros:"));
+        
+        if (euros > 0) {
+            let tasaDeCambio = 1.1; // Tasa de cambio ficticia de 1 Euro = 1.1 Dólares
+            let dolares = euros * tasaDeCambio;
+            document.write(euros + " Euros son equivalentes a: " + dolares.toFixed(2) + " Dólares.");
+        } else {
+            document.write("Por favor, ingrese un valor válido.");
+        }
+    </script>
+</body>
+</html>

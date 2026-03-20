@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de Pulgadas a Centímetros</title>
+</head>
+<body>
+    <h1>Conversión de Pulgadas a Centímetros</h1>
+
+    <script>
+        let pulgadas = parseFloat(prompt("Ingrese el valor en pulgadas:"));
+        
+        if (pulgadas > 0) {
+            let centimetros = pulgadas * 2.54;
+            document.write(pulgadas + " pulgadas son equivalentes a: " + centimetros + " centímetros.");
+        } else {
+            document.write("Por favor, ingrese un valor válido.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación del Estudiante</title>
+</head>
+<body>
+    <h1>Evaluación Final del Estudiante</h1>
+
+    <script>
+        // Pedimos las calificaciones de los tres trimestres
+        let nota1 = parseFloat(prompt("Ingrese la calificación del primer trimestre:"));
+        let nota2 = parseFloat(prompt("Ingrese la calificación del segundo trimestre:"));
+        let nota3 = parseFloat(prompt("Ingrese la calificación del tercer trimestre:"));
+        
+        // Calculamos el promedio
+        let promedio = (nota1 + nota2 + nota3) / 3;
+
+        // Evaluamos si aprueba o no según el promedio
+        if (promedio >= 4.5) {
+            alert("¡Aprobado! El estudiante tiene un promedio de " + promedio.toFixed(2));
+        } else {
+            alert("No aprobado. El estudiante tiene un promedio de " + promedio.toFixed(2));
+        }
+    </script>
+</body>
+</html>

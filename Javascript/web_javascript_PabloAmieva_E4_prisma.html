@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Volumen - Prisma Rectangular</title>
+</head>
+<body>
+    <h1>Cálculo de Volumen de un Prisma Rectangular</h1>
+
+    <script>
+        let largo = parseFloat(prompt("Ingrese el valor del largo del prisma (en unidades):"));
+        let ancho = parseFloat(prompt("Ingrese el valor del ancho del prisma (en unidades):"));
+        let altura = parseFloat(prompt("Ingrese el valor de la altura del prisma (en unidades):"));
+        
+        if (largo > 0 && ancho > 0 && altura > 0) {
+            let volumen = largo * ancho * altura;
+            document.write("El volumen del prisma es: " + volumen + " unidades cúbicas.");
+        } else {
+            document.write("Por favor, ingrese valores válidos.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de Kilómetros a Metros</title>
+</head>
+<body>
+    <h1>Conversión de Kilómetros a Metros</h1>
+
+    <script>
+        let km = parseFloat(prompt("Ingrese el valor en kilómetros:"));
+        
+        if (km > 0) {
+            let metros = km * 1000;
+            document.write(km + " kilómetros son equivalentes a: " + metros + " metros.");
+        } else {
+            document.write("Por favor, ingrese un valor válido.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Volumen - Cubo</title>
+</head>
+<body>
+    <h1>Cálculo de Volumen de un Cubo</h1>
+
+    <script>
+        let lado = parseFloat(prompt("Ingrese el valor del lado del cubo (en unidades):"));
+        
+        if (lado > 0) {
+            let volumen = Math.pow(lado, 3);
+            document.write("El volumen del cubo es: " + volumen + " unidades cúbicas.");
+        } else {
+            document.write("Por favor, ingrese un valor válido para el lado.");
+        }
+    </script>
+</body>
+</html>

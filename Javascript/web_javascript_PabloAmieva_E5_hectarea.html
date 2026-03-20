@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversión de Hectáreas a Metros Cuadrados</title>
+</head>
+<body>
+    <h1>Conversión de Hectáreas a Metros Cuadrados</h1>
+
+    <script>
+        let hectareas = parseFloat(prompt("Ingrese el valor en hectáreas:"));
+        
+        if (hectareas > 0) {
+            let metrosCuadrados = hectareas * 10000;
+            document.write(hectareas + " hectáreas son equivalentes a: " + metrosCuadrados + " metros cuadrados.");
+        } else {
+            document.write("Por favor, ingrese un valor válido.");
+        }
+    </script>
+</body>
+</html>
