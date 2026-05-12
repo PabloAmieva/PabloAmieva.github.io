@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>P01 — Consola, tipos y operadores</title>
+</head>
+<body>
+
+    <h1>P01 — Consola, tipos y operadores</h1>
+    <p>Abre la consola del navegador para ver parte de los resultados (F12).</p>
+
+    <script>
+        // BLOQUE 1 — Secuencia con alert()
+        // Pasos para freír un huevo
+
+        /* Estas alertas tienen sentido en orden.
+           Se comprueba que JavaScript ejecuta de arriba abajo. */
+        alert("Paso 1: Romper el huevo en un plato.");
+        alert("Paso 2: Calentar la sartén con un poco de aceite.");
+        alert("Paso 3: Verter el huevo en la sartén caliente.");
+        alert("Paso 4: Cocinar hasta que la clara esté firme y servir.")
+
+        // BLOQUE 2 — Consola: + con tipos
+        var x = 16 + 4;
+        console.log(x); // 20
+
+        var x = "16" + "Blue";
+        console.log(x); // 16Blue
+
+        var x = 16 + 4 + "Blue";
+        console.log(x); // 20Blue
+
+        var x = "Blue" + 16 + 4;
+        console.log(x); // Blue164
+
+        // BLOQUE 3 — Consola: undefined y cambios de tipo
+        var x;
+        console.log(x); // undefined
+
+        var x = 5;
+        console.log(x); // 5
+
+        var x = "Juan";
+        console.log(x); // Juan
+
+        // BLOQUE 4.1 — Prioridad aritmética
+        var resultado_0 = 33 - 12 / 2;          // 27
+        var resultado_1 = (33 - 12) / 2;        // 10.5
+        var resultado_2 = 33 - 12 * 2;          // 9
+        var resultado_3 = 33 - 12 ** 2;         // -111
+        var resultado_4 = (33 - 12) ** 2;       // 441
+        var resultado_5 = 33 - 12 * 2 ** 2;     // -15
+        var resultado_6 = 33 - 12 / 2 ** 2;     // 30
+
+        console.log("resultado_0 =", resultado_0);
+        console.log("resultado_1 =", resultado_1);
+        console.log("resultado_2 =", resultado_2);
+        console.log("resultado_3 =", resultado_3);
+        console.log("resultado_4 =", resultado_4);
+        console.log("resultado_5 =", resultado_5);
+        console.log("resultado_6 =", resultado_6);
+
+        // BLOQUE 4.2 — Comparación y lógicos
+        var resultado_7 = 33 - 12 * 2 ** 2 >= 100;   // false
+        var resultado_8 = 33 - 12 / 2 ** 2 >= 100;   // false
+        var resultado_9 = 33 - 12 * 2 ** 2 < 3 && 2 < 33 - 12 / 2 ** 2; // true
+
+        console.log("resultado_7 =", resultado_7);
+        console.log("resultado_8 =", resultado_8);
+        console.log("resultado_9 =", resultado_9);
+
+        // SALIDA EN PÁGINA — document.write()
+        var A = 10;
+        var B = 20;
+
+        document.write("<h2>Resultados lógicos</h2>");
+        document.write("<p>A menor que B y B menor que A es: → " + (A < B && B < A) + "</p>");
+        document.write("<p>A menor que B o B menor que A es: → " + (A < B || B < A) + "</p>");
+        document.write("<p>Si negamos que A es menor que B entonces es: → " + (!(A < B)) + "</p>");
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 — Funciones y botones</title>
+</head>
+<body>
+
+    <h1>Ejercicio 10 — Funciones y botones</h1>
+
+    <p>En esta página se usan botones para ejecutar diferentes funciones en JavaScript.</p>
+
+    <button onclick="saludar()">Saludar</button>
+    <button onclick="sumarDosNumeros()">Sumar dos números</button>
+    <button onclick="calcularEdad()">Calcular año de nacimiento</button>
+    <button onclick="comprobarMayorEdad()">Comprobar mayoría de edad</button>
+    <button onclick="verificarNota()">Comprobar nota</button> <!-- Quinta función -->
+
+    <script>
+
+        // Función 1: Saludar
+        function saludar() {
+            alert("Hola. Has ejecutado la función saludar.");
+        }
+
+        // Función 2: Sumar dos números
+        function sumarDosNumeros() {
+            var numero1 = Number(prompt("Introduce el primer número"));
+            var numero2 = Number(prompt("Introduce el segundo número"));
+            var suma = numero1 + numero2;
+            alert("El resultado de la suma es: " + suma);
+        }
+
+        // Función 3: Calcular año de nacimiento
+        function calcularEdad() {
+            var edad = Number(prompt("Introduce tu edad"));
+            var anioActual = 2026;
+            var fechaNacimiento = anioActual - edad;
+            alert("Tu año aproximado de nacimiento es: " + fechaNacimiento);
+        }
+
+        // Función 4: Comprobar mayoría de edad
+        function comprobarMayorEdad() {
+            var edad = Number(prompt("Introduce tu edad"));
+            if (edad >= 18) {
+                alert("Eres mayor de edad.");
+            } else {
+                alert("Eres menor de edad.");
+            }
+        }
+
+        // Función 5: Verificar nota (aprobado/suspenso)
+        function verificarNota() {
+            var nota = Number(prompt("Introduce tu nota (0-10)"));
+            if (nota >= 0 && nota < 5) {
+                alert("Has suspendido.");
+            } else if (nota >= 5 && nota <= 10) {
+                alert("Has aprobado.");
+            } else {
+                alert("Nota inválida. Introduce un número entre 0 y 10.");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

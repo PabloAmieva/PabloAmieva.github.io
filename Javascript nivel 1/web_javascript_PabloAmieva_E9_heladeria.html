@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 09 — Heladería</title>
+</head>
+<body>
+    <h1>Ejercicio 09 — Heladería</h1>
+    <p>En este ejercicio el usuario elige tamaño, sabor y topping de un helado, y el programa calcula el precio final.</p>
+
+    <script>
+        var precioTotal = 0;
+
+        // Elegir tamaño
+        var tamaño = prompt("Elige el tamaño de tu helado: pequeño, mediano o grande").toLowerCase();
+        if (tamaño === "pequeño") {
+            precioTotal += 1;
+        } else if (tamaño === "mediano") {
+            precioTotal += 2;
+        } else if (tamaño === "grande") {
+            precioTotal += 3;
+        } else {
+            alert("Tamaño no válido. Se asignará pequeño por defecto.");
+            tamaño = "pequeño";
+            precioTotal += 1;
+        }
+
+        // Elegir sabor
+        var sabor = prompt("Elige el sabor de tu helado: vainilla, chocolate, pistacho, turrón").toLowerCase();
+        var imagenSabor = "";
+        switch (sabor) {
+            case "vainilla":
+                precioTotal += 0;
+                imagenSabor = "https://www.bavette.es/wp-content/uploads/helado-de-vainilla-y-toffee-2-copia.jpg";
+                break;
+            case "chocolate":
+                precioTotal += 0;
+                imagenSabor = "https://fryscol.com/storage/2024/03/Cono-helado-suave-chocolate_.jpg";
+                break;
+            case "pistacho":
+                precioTotal += 1;
+                imagenSabor = "https://images.ecestaticos.com/d_dfueBCG3wqGx-S9hoASgCmGRg=/0x0:1024x768/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F465%2F750%2Fdb6%2F465750db65426d87dce3be058679bbd3.jpg";
+                break;
+            case "turrón":
+                precioTotal += 1;
+                imagenSabor = "https://media-cdn.tripadvisor.com/media/photo-s/1b/ae/d8/92/helado-de-turron-sin.jpg";
+                break;
+            default:
+                alert("Sabor no válido. Se asignará vainilla por defecto.");
+                sabor = "vainilla";
+                precioTotal += 0;
+                imagenSabor = "https://upload.wikimedia.org/wikipedia/commons/3/35/Vanilla_ice_cream_cone.jpg";
+        }
+
+        // Elegir topping
+        var topping = prompt("Elige un topping: sirope, galleta, oreo, brownie").toLowerCase();
+        switch (topping) {
+            case "sirope":
+            case "galleta":
+                precioTotal += 0.3;
+                break;
+            case "oreo":
+            case "brownie":
+                precioTotal += 0.5;
+                break;
+            default:
+                alert("Topping no válido. Se asignará sirope por defecto.");
+                topping = "sirope";
+                precioTotal += 0.3;
+        }
+
+        // Mostrar resumen
+        document.write("<h2>Tu helado:</h2>");
+        document.write("<p>Tamaño: " + tamaño + "<br>");
+        document.write("Sabor: " + sabor + "<br>");
+        document.write("Topping: " + topping + "</p>");
+
+        // Mostrar precio final
+        document.write("<h1>El precio final de tu helado es: " + precioTotal.toFixed(2) + " €</h1>");
+
+        // Mostrar imagen según sabor
+        document.write('<img src="' + imagenSabor + '" alt="Helado ' + sabor + '" width="300">');
+    </script>
+</body>
+</html>
